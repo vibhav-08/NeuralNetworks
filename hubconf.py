@@ -112,6 +112,7 @@ def train(train_dataloader, test_dataloader, model1, loss_fn1, optimizer1, epoch
         _train(train_dataloader, model1, loss_fn1, optimizer1)
         _test(test_dataloader, model1, loss_fn1)
     print("Done!")
+    return model1
 
 def save_model(model1,mypath="model.pth"):
     torch.save(model1.state_dict(), mypath)
