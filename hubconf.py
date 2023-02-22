@@ -70,9 +70,9 @@ def get_model():
     model = NeuralNetwork().to(device)
     print(model)
 
-def getLossFunctionAndOptimizer(model):
+def getLossFunctionAndOptimizer(mymodel):
     loss_fn = nn.CrossEntropyLoss()
-    optimizer = torch.optim.SGD(model.parameters(), lr=1e-3)
+    optimizer = torch.optim.SGD(mymodel.parameters(), lr=1e-3)
     return loss_fn, optimizer
 
 def _train(dataloader, model, loss_fn, optimizer):
