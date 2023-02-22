@@ -69,6 +69,7 @@ class NeuralNetwork(nn.Module):
 def get_model():
     model = NeuralNetwork().to(device)
     print(model)
+    return model
 
 def get_loss_function_and_optimizer(mymodel):
     loss_fn = nn.CrossEntropyLoss()
