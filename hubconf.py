@@ -36,7 +36,7 @@ def load_data():
     )
     return training_data, test_data
 
-def create_dataloaders():
+def create_dataloaders(training_data, test_data, batch_size = 64):
     # Create data loaders.
     train_dataloader = DataLoader(training_data, batch_size=batch_size)
     test_dataloader = DataLoader(test_data, batch_size=batch_size)
